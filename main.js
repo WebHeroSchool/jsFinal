@@ -32,3 +32,21 @@ function chooseLevel() {
 }
 
 chooseLevel()
+
+
+
+function turnCard() {
+
+    const card = document.querySelectorAll('.card-back');
+
+    card.forEach(function (item) {
+        item.addEventListener('click', function () {
+            if (this.className === 'card-back') {
+                this.classList.remove('card-back')
+                this.classList.add('card-front')
+            }
+        });
+    })
+};
+
+turnCard();

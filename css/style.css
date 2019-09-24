@@ -8,6 +8,7 @@ body {
 .main-page {
     position: absolute;
     /* display: none; */
+    margin: 50px 50px 50px 50px;
 }
 
 .page_text {
@@ -36,7 +37,8 @@ body {
 .page_choose-difficulty {
     display: flex;
     flex-flow: column nowrap;
-    margin-bottom: 100px;
+    margin: 0 0 100px 20px;
+
 }
 
 .choose-difficulty{
@@ -52,7 +54,6 @@ body {
 }
 
 .label:hover {
-    color:red;
     cursor: pointer;
 } 
 
@@ -62,8 +63,8 @@ body {
     height: 26px;
     background-image: url(../img/rectangle.png);
     position: absolute;
-    left: 40px;
-    margin-top: 17px;
+    left: 55px;
+    margin-top: 14px;
 }
 
 
@@ -113,11 +114,12 @@ body {
     width: 218px;
     height: 341px;
     margin: 10px 10px 10px 10px;
-}
+    }
 
 .card-back:hover {
     transform: translateY(-10px) rotate(-3.08deg);
     transition: transform 0.5s;
+    cursor: pointer;
 }
 
 .difficulty-medium {
@@ -152,4 +154,18 @@ body {
     display: flex;
     flex-flow: row wrap;
     width: 1300px;
+}
+
+.card-front {
+    width: 218px;
+    height: 341px;
+    margin: 10px 10px 10px 10px;
+    background-image: url(../img/gameover.png);  
+    transition: transform 1.5s;      
+}
+
+.card-front:hover {
+        transform: translateY(-10px) rotate(-3.08deg);
+        transition: transform 0.5s;
+        cursor: pointer;
 }
