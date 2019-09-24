@@ -45,6 +45,9 @@ function turnCard() {
                 this.classList.remove('card-back')
                 this.classList.add('card-front')
             }
+            else if (this.className === 'card-front') {
+                document.location.reload(true);
+            }
         });
     })
 };
