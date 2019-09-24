@@ -33,33 +33,40 @@ body {
     margin-bottom: 5%;
 }
 
-.page_choise-difficulty {
+.page_choose-difficulty {
     display: flex;
     flex-flow: column nowrap;
     margin-bottom: 100px;
 }
 
-.choise-difficulty {
+.choose-difficulty{
+    visibility: hidden;
+    margin-bottom: 3%;
+}
+
+.label {
     color: #FFFFFF;
     font-size: 50px;
     line-height: 59px;
     padding-bottom: 2%;
 }
 
-.choise-difficulty:checked::before{
+.label:hover {
+    color:red;
+    cursor: pointer;
+} 
+
+.choose-difficulty:checked + .label::before{
     content: '';
     width: 26px;
     height: 26px;
     background-image: url(../img/rectangle.png);
     position: absolute;
-    top: 15px;
-    left: -55px;
+    left: 40px;
+    margin-top: 17px;
 }
 
-.choise-difficulty:hover {
-    color:red;
-    cursor: pointer;
-}
+
 
 .main-page_button {
     width: 352px;
