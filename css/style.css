@@ -8,7 +8,8 @@ body {
 .main-page {
     position: absolute;
     /* display: none; */
-    margin: 50px 50px 50px 50px;
+    margin:auto;
+     width: 100%;
 }
 
 .page_text {
@@ -94,8 +95,8 @@ body {
     position: relative;
     width: 514.58px;
     height: 407.99px;
-    margin-left: 650px;
-    margin-top: -250px;
+    margin-left: 50%;
+    margin-top: -350px;
 }
 
 .difficulty-simple {
@@ -109,63 +110,75 @@ body {
     display: none;
 }
 
-.card-back {
-    background-image: url(../img/card-back.png);
+.wrap {
+    position: relative;
     width: 218px;
     height: 341px;
-    margin: 10px 10px 10px 10px;
-    }
-
-.card-back:hover {
-    transform: translateY(-10px) rotate(-3.08deg);
-    transition: transform 0.5s;
     cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 1.5s;
+    margin: 15px 15px 15px 15px;
+ }
+
+.card  {
+   position: relative;
+    backface-visibility: hidden;
+    box-shadow: 0 2px 5px #666;
+}
+
+.rotated  {
+    transform: rotateY(180deg);
+}
+
+.back {
+    background-image: url(../img/card-back.png);
+    width: 218px;
+    height: 341px;   
+    position: absolute;
+}
+
+.back:hover {
+    transform: translateY(-20px) rotate(-2deg) ;
+    transition: transform 1s;
+}
+
+.front {
+    width: 218px;
+    height: 341px;   
+    background-image: url(../img/gameover.png);  
+    transform: rotateY(180deg);
 }
 
 .difficulty-medium {
-    position: absolute;
-    width: 100%;
+    margin: auto;
+    margin-top: 6%;
+    max-width: 800px;
     height: 100%;
-    display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     display: none;
-}
-
-.card-container {
-    display: flex;
-    flex-flow: row wrap;
-    width: 750px;
 }
 
 .diffyculty-hard {
-    position: absolute;
-    width: 100%;
+    margin: auto;
+    margin-top: 6%;
+    max-width: 1400px;
     height: 100%;
-    display: flex;
-    flex-flow: row;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     display: none;
 }
 
-.card-container-hard {
-    display: flex;
-    flex-flow: row wrap;
-    width: 1300px;
-}
-
-.card-front {
+.bug {
     width: 218px;
-    height: 341px;
-    margin: 10px 10px 10px 10px;
-    background-image: url(../img/gameover.png);  
-    transition: transform 1.5s;      
-}
+    height: 341px;   
+    background-image: url(../img/win.png); 
+} 
 
-.card-front:hover {
-        transform: translateY(-10px) rotate(-3.08deg);
-        transition: transform 0.5s;
-        cursor: pointer;
-}
+
+
+
+
+
