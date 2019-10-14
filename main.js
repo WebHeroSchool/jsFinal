@@ -52,11 +52,8 @@ function turnCard() {
 
         card[i].addEventListener('click', function () {
 
-            if (this.className === 'wrap') {
+            if (this.className === 'wrap easy' || this.className === 'wrap medium' || this.className === 'wrap hard') {
                 this.classList.add('rotated')
-            }
-            else {
-                this.className = 'wrap';
             }
         })
     }
@@ -65,7 +62,7 @@ turnCard()
 
 function reloadGame() {
 
-    let cardFrontOrBug = document.getElementsByClassName('card front');
+    let cardFrontOrBug = document.getElementsByClassName('card');
 
     for (i = 0; i < cardFrontOrBug.length; i++) {
 
@@ -73,7 +70,9 @@ function reloadGame() {
             if (this.className === 'card front' || this.className === 'card front bug') {
                 document.location.reload(true);
             }
+
         })
     }
 }
 reloadGame()
+
