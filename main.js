@@ -18,6 +18,8 @@ const card = document.getElementsByClassName('wrap');
 
 let bugNumber;
 let numberOfClick = 0;
+let rotatedCard = false;
+
 
 function chooseLevel() {
     startGameBtn.addEventListener('click', function () {
@@ -43,15 +45,11 @@ chooseLevel()
 
 
 function turnCard() {
-
     for (i = 0; i < card.length; i++) {
         card[i].addEventListener('click', function () {
-            if (this.className === 'wrap easy' || this.className === 'wrap medium' || this.className === 'wrap hard') {
+            if (!rotatedCard) {
                 this.classList.add('rotated')
-                numberOfClick++
-                console.log(numberOfClick)
-            } else if (numberOfClick !== 0) {
-                location.reload()
+                rotatedCard = true;
             }
         })
     }
@@ -59,35 +57,14 @@ function turnCard() {
 turnCard()
 
 
-
-// function reloadGame() {
-
-//     let cardFrontOrBug = document.getElementsByClassName('card');
-
-//     for (i = 0; i < cardFrontOrBug.length; i++) {
-
-//         cardFrontOrBug[i].addEventListener('click', function () {
-//             if (this.className === 'card front' || this.className === 'card front bug') {
-//                 // document.location.reload(true);
-//             }
-
-//         })
-//     }
-// }
-// reloadGame()
-
 function reloadGame() {
-
     const cardCount = document.querySelectorAll(`.card`);
-
     cardCount.forEach((elem) => {
-
         elem.addEventListener('click', () => {
-
             if (numberOfClick === 0) {
                 numberOfClick++;
             } else {
-                // location.reload();
+                location.reload();
             };
         });
     });
