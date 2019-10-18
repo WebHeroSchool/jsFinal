@@ -7,9 +7,8 @@ body {
 
 .main-page {
     position: absolute;
-    /* display: none; */
     margin:auto;
-     width: 100%;
+    width: 100%;
 }
 
 .page_text {
@@ -177,7 +176,13 @@ body {
     background-image: url(../img/win.png); 
 } 
 
+.visible {
+    display: flex;
+}
 
+.hidden {
+    display: none;
+}
 
 
 

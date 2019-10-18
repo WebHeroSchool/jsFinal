@@ -24,18 +24,18 @@ let rotatedCard = false;
 function chooseLevel() {
     startGameBtn.addEventListener('click', function () {
         if (easyDifficulty.checked) {
-            mainPage.style.display = 'none';
-            levelEasyPage.style.display = 'flex';
+            mainPage.classList.add('hidden');
+            levelEasyPage.classList.add('visible');
             bugNumber = Math.floor(Math.random() * 3);
             frontCardEasyBug[bugNumber].classList.add('bug');
         } else if (mediumDifficulty.checked) {
-            mainPage.style.display = 'none';
-            levelMediumPage.style.display = 'flex';
+            mainPage.classList.add('hidden');
+            levelMediumPage.classList.add('visible');
             bugNumber = Math.floor(Math.random() * 6);
             frontCardMediumBug[bugNumber].classList.add('bug');
         } else if (hardDifficulty.checked) {
-            mainPage.style.display = 'none';
-            levelHardPage.style.display = 'flex';
+            mainPage.classList.add('hidden');
+            levelHardPage.classList.add('visible');
             bugNumber = Math.floor(Math.random() * 10);
             frontCardHardBug[bugNumber].classList.add('bug');
         }
